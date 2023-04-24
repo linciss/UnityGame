@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToggleItems : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class ToggleItems : MonoBehaviour {
     public GameObject[] shirtArr;
     public GameObject[] pantArr;
     public GameObject[] shoeArr;
+    public GameObject humanImage;
+    public Sprite[] humanArr;
 
     public void hatImage(bool status) 
 	{
@@ -46,6 +49,29 @@ public class ToggleItems : MonoBehaviour {
         {
             shoeArr[i].SetActive(status);
         }
+    }
+    /*    public void Izkritosais(int indekss)
+        {
+            if (indekss == 0)
+                mainigaisAttels.GetComponent<Image>().sprite
+                    = atteluMasivs[0];
+
+            else if (indekss == 1)
+                mainigaisAttels.GetComponent<Image>().sprite
+                    = atteluMasivs[1];
+
+            else if (indekss == 2)
+                mainigaisAttels.GetComponent<Image>().sprite
+                    = atteluMasivs[2];
+        }*/
+    public void dropDown(int index)
+    {
+        if (index == 0)
+        {
+            humanImage.GetComponent<Image>().sprite = humanArr[index];
+            return;
+        }
+        humanImage.GetComponent<Image>().sprite = humanArr[index];
     }
 
 
