@@ -10,7 +10,8 @@ public class TextField : MonoBehaviour {
 	public GameObject textField;
 
 	public void showText()
-	{ 
-		textField.GetComponent<Text>().text = nameField.GetComponent<InputField>().text + "\n" + ageField.GetComponent<InputField>().text;
+	{
+		
+        textField.GetComponent<Text>().text = nameField.GetComponent<InputField>().text + "\n" + ageField.GetComponent<InputField>().text;
     }
 }
