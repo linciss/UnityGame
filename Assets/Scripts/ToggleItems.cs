@@ -12,8 +12,11 @@ public class ToggleItems : MonoBehaviour {
     public GameObject[] shirtArr;
     public GameObject[] pantArr;
     public GameObject[] shoeArr;
-    public GameObject humanImage;
+    public GameObject humanImage, widthSlider, heightSlider;
     public Sprite[] humanArr;
+    float height =1f, width =1f;
+
+
 
     public void hatImage(bool status) 
 	{
@@ -50,20 +53,7 @@ public class ToggleItems : MonoBehaviour {
             shoeArr[i].SetActive(status);
         }
     }
-    /*    public void Izkritosais(int indekss)
-        {
-            if (indekss == 0)
-                mainigaisAttels.GetComponent<Image>().sprite
-                    = atteluMasivs[0];
-
-            else if (indekss == 1)
-                mainigaisAttels.GetComponent<Image>().sprite
-                    = atteluMasivs[1];
-
-            else if (indekss == 2)
-                mainigaisAttels.GetComponent<Image>().sprite
-                    = atteluMasivs[2];
-        }*/
+   
     public void dropDown(int index)
     {
         if (index == 0)
@@ -72,6 +62,18 @@ public class ToggleItems : MonoBehaviour {
             return;
         }
         humanImage.GetComponent<Image>().sprite = humanArr[index];
+    }
+
+    public void changeWidth()
+    {
+        width = widthSlider.GetComponent<Slider>().value;
+        humanImage.transform.localScale = new Vector2(1f * width,height);
+    }
+
+    public void changeHeight()
+    {
+        height = heightSlider.GetComponent<Slider>().value;
+        humanImage.transform.localScale = new Vector2(width, 1f * height);
     }
 
 
