@@ -12,6 +12,6 @@ public class TextField : MonoBehaviour {
 	public void showText()
 	{
 		
-        textField.GetComponent<Text>().text = nameField.GetComponent<InputField>().text + "\n" + ageField.GetComponent<InputField>().text;
+        textField.GetComponent<Text>().text = "Name: " + nameField.GetComponent<InputField>().text + "\nAge:" + ageField.GetComponent<InputField>().text;
     }
 }
