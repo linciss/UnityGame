@@ -46,7 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\HumanSound.cs" />
      <Compile Include="Assets\Scripts\ObjectDragAndDrop.cs" />
+     <Compile Include="Assets\Scripts\SceneChanger.cs" />
      <Compile Include="Assets\Scripts\TextField.cs" />
      <Compile Include="Assets\Scripts\ToggleItems.cs" />
  <Reference Include="UnityEngine.UI">

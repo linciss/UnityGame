@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -128,12 +126,12 @@ public class ToggleItems : MonoBehaviour {
                 h1PantArr[i].SetActive(false);
                 h1ShoeArr[i].SetActive(false);
             }
-            
-            humanImage.GetComponent<Image>().sprite = humanArr[index];
+
             for (int i = 0; i < toggles.Length; i++)
             {
                 toggles[i].GetComponent<Toggle>().isOn = false;
             }
+            humanImage.GetComponent<Image>().sprite = humanArr[index];
             return;
         }
         
